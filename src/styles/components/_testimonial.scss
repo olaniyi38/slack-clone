@@ -1,0 +1,165 @@
+@use "../utils" as *;
+
+
+.testimonial {
+
+    aside {
+        color: gray;
+        font-size: .9rem;
+        text-align: center;
+        padding: 1rem 0rem;
+    }
+
+    &__video {
+        clip-path: inset(5px 0 5px 0 round 0 500px 500px 0);
+        position: relative;
+        margin: 0rem 1rem 1rem 0rem;
+
+        .play-link {
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            background: none;
+            display: grid;
+            place-items: center;
+
+            &:hover {
+                .play-btn {
+                    background: hsl(206, 91%, 27%);
+                }
+
+            }
+
+            .play-btn {
+                display: grid;
+                place-items: center;
+                width: 6rem;
+                height: 3.5rem;
+                border-radius: .5rem;
+                background: $light-blue;
+                transition: background-color .1s 0s ease-in-out;
+
+
+                .play-svg {
+                    width: 50%;
+                    height: 50%;
+                    fill: white;
+                    stroke: white;
+                }
+            }
+        }
+    }
+
+    &__container {
+        padding: 1rem 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__quote {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    &__by {
+        h1 {
+            font-weight: 700;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: .9rem;
+        }
+
+    }
+
+    &__link {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        font-size: 1.05rem;
+        text-transform: capitalize;
+        color: hsl(206, 91%, 27%);
+        font-weight: 500;
+
+        svg {
+            width: 1.5rem;
+            margin-top: .2rem;
+        }
+
+    }
+
+
+}
+
+@media (min-width:768px) {
+
+    .testimonial {
+
+
+        aside {
+            font-weight: 500;
+        }
+
+        &__video {
+            clip-path: inset(30px 0 30px 0 round 0 500px 500px 0);
+            max-width: 80%;
+        }
+
+        &__container {
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        &__quote {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+
+
+
+
+    }
+}
+
+@media (min-width:1024px) {
+    .testimonial {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 0rem 2rem;
+
+        aside {
+            font-weight: 500;
+            flex:  1 0 100%;
+        }
+
+        &__video {
+            clip-path: inset(30px 0 30px 0 round 0 500px 500px 0);
+            flex: 1 0;
+        }
+
+        &__container {
+            flex: 1 0;
+            padding: 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        &__quote {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+
+
+
+
+
+    }
+}

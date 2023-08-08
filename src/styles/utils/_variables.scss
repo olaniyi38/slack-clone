@@ -1,0 +1,16 @@
+//  Primary -
+$dark-purple: hsl(300, 60%, 21%);
+//  ### Neutral - 
+$cool-gray: hsl(34, 42%, 93%);
+$dark-orange: hsl(42, 83%, 55%);
+$light-blue: hsl(217, 89%, 61%);
+$light-purple: hsl(34, 42%, 93%);
+
+
+//FLUID FONT-SIZES
+
+$scale-xl: clamp(2.5rem, 2.1364rem + 1.8182vw, 3.5rem);
+$scale-l: clamp(1.7rem, 1.3rem + 2vw, 2.8rem);
+$scale-m: clamp(1.4rem, 1.1818rem + 1.0909vw, 2rem);
+$scale-s: clamp(1rem, 0.9091rem + 0.4545vw, 1.25rem);
+$scale-xs: clamp(0.85rem, 0.7955rem + 0.2727vw, 1rem);

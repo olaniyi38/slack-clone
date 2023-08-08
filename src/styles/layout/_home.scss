@@ -1,0 +1,52 @@
+@use '../utils' as *;
+
+main {
+   .trusted-companies {
+
+      padding: 2rem;
+      background: $cool-gray;
+
+      > div {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 1.5rem 1rem;
+         align-items: center;
+         justify-content: center;
+         max-width: 50rem;
+         margin-inline: auto;
+      }
+
+      h1 {
+         text-align: center;
+         font-weight: 600;
+         font-size: .9rem;
+         letter-spacing: 1.5px;
+         margin-bottom: .5rem;
+         text-transform: uppercase;
+      }
+   }
+}
+
+@media (min-width:768px) {
+   main {
+      .trusted-companies {
+         h1 {
+            margin-bottom: 1.4rem;
+         }
+
+         > div {
+            gap: 1.5rem;
+         }
+      }
+   }
+}
+
+@media (min-width:1024px) {
+   main {
+      .trusted-companies {
+        > div {
+         justify-content: space-between;
+        }
+      }
+   }
+}

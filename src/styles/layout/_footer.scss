@@ -1,0 +1,71 @@
+@use '../utils' as * ;
+
+.footer {
+    padding: 1rem;
+    max-width: 80rem;
+    margin-inline: auto;
+
+    &__logo {
+        svg {
+            width: 4rem;
+        }
+
+        margin-bottom: 2rem;
+    }
+
+    &__links {}
+
+    &__links2 {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: $scale-xs;
+        font-weight: 500;
+        border-top: 1px solid rgb(190, 190, 190);
+        padding: 1rem 0rem;
+
+        a {
+            flex: 0 1 auto;
+        }
+    }
+
+    aside {
+        padding: 1rem 0rem;
+        color: gray;
+        font-size: .8rem;
+    }
+}
+
+@media (min-width:768px) {
+    .footer {
+        padding: 0rem 2rem 2rem 2rem;
+
+        .link-list__links {
+            clip-path: inset(0% 0% 0% 0%);
+            transition: none;
+            height: 100%;
+        }
+
+
+        &__links {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__links2 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        aside {
+            padding: 1rem 0rem;
+            color: rgb(100, 99, 99);
+            font-size: .85rem;
+            font-weight: 500;
+        }
+    }
+
+}

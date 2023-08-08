@@ -1,0 +1,67 @@
+@use '../utils' as * ;
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    max-width: 18rem;
+    margin: 1rem auto;
+    height: 26rem;
+    padding: 1rem;
+    text-transform: capitalize;
+    transition: all .1s 0s linear;
+
+    &:hover {
+        box-shadow: 2px 0px 20px -15px black;
+        transform: scale(1.02);
+    }
+
+    &__img {}
+
+    &__content {
+    }
+
+    &__tag {
+        color: gray;
+        font-size: .85rem;
+        margin: .5rem 0rem;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size:$scale-s;
+
+
+    }
+
+    &__footer {
+          margin: auto 0 0 0;
+    }
+
+
+    &__link {
+        color: hsl(206, 85%, 24%);
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        svg {
+            width: 2rem;
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .card {
+        height: 24rem;
+        &__img {
+            aspect-ratio: 2/ 1 ;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

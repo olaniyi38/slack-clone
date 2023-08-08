@@ -1,0 +1,41 @@
+@use '../utils' as *;
+
+.cta {
+    padding: 2rem 1rem 6rem 1rem;
+    text-align: center;
+    background: $dark-purple;
+    color: white;
+    margin-bottom: 5rem;
+    clip-path: ellipse(105% 100% at center top);
+
+
+
+    &__title {
+        font-size: $scale-l;
+        font-weight: 800;
+        margin-bottom: 1.5rem;
+
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: $scale-xs;
+    }
+}
+
+@media (min-width:1024px) {
+    .cta {
+        clip-path: ellipse(75% 100% at center top);
+         padding: 4rem 1rem 8rem 1rem;
+
+     
+
+        &__buttons {
+            flex-direction: row;
+            justify-content: center;
+            
+        }
+    }
+}

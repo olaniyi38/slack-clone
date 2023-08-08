@@ -1,0 +1,177 @@
+@use '../utils' as *;
+
+
+.hero {
+    background-color: $dark-purple;
+    color: $cool-gray;
+
+    &__text-aside {
+        display: none;
+    }
+
+    &__container {
+        padding: 3rem 0rem 0rem 0rem;
+        font-weight: 500;
+        text-align: center;
+        overflow: hidden;
+        max-width: 80rem;
+        margin-inline: auto;
+
+    }
+
+    hgroup {
+        font-size: $scale-xl;
+        line-height: 1;
+        font-weight: 900;
+        padding: 0rem 1rem 2rem 1rem;
+    }
+
+    &__sub-title {
+        color: $dark-orange;
+        margin-top: 1rem;
+    }
+
+    &__text {
+        padding: 0rem .5rem;
+        font-size: $scale-s;
+        margin: 0rem 0rem 1rem 0rem;
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        text-transform: capitalize;
+        gap: 1rem 0rem;
+        padding: 0rem 1rem;
+
+        .google-svg {
+            width: 2rem;
+
+
+        }
+    }
+
+    &__video {
+        margin-top: 2rem;
+        width: 37rem;
+
+    }
+
+}
+
+@media (min-width : 768px) {
+    .hero {
+        padding: 1rem 1.5rem 4rem 1.5rem;
+
+        &__container {
+            display: flex;
+            text-align: left;
+
+        }
+
+        &__section1 {
+            flex: 2 0 60%;
+
+        }
+
+        &__section2 {
+            padding: 0rem 0rem 0rem 1rem;
+            flex: 1 1 50%;
+        }
+
+        hgroup {
+            padding: 0rem 1rem 2rem 0rem;
+        }
+
+        &__sub-title {
+            margin-top: 1rem;
+        }
+
+        &__text {
+            padding: 0rem 2rem 0rem 0rem;
+            font-size: 1.1rem;
+            margin: 0rem 0rem 1rem 0rem;
+        }
+
+        &__actions {
+            gap: 1rem 0rem;
+            padding: 0rem 1rem;
+
+            .google-svg {
+                width: 2rem;
+            }
+        }
+
+        &__video {
+            margin-top: 2rem;
+            width: 45rem;
+        }
+
+    }
+
+}
+
+@media (min-width:1024px) {
+    .hero {
+        position: relative;
+        padding: 1rem 1.5rem 5rem 1.5rem;
+
+        &__text-aside {
+            display: block;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-top: .8rem;
+        }
+
+        &__section1 {
+            max-width: 38rem;
+
+        }
+
+        &__section2 {
+            padding: 0rem 0rem 0rem 1rem;
+        }
+
+        hgroup {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                display: block;
+            }
+        }
+
+
+        &__actions {
+            flex-direction: row;
+            gap: 1rem;
+            padding: .5rem 3rem .5rem 0rem;
+
+            button {
+                font-size: .9rem;
+                padding: 1rem;
+            }
+
+            .button--google {
+                flex: 1 0;
+            }
+
+            .button--inverted {
+                flex: 0.8 0;
+            }
+
+        }
+
+        &__video {
+            video {
+                position: absolute;
+                width: min(42rem, 50%);
+                right: 2rem;
+                top: 0rem;
+                bottom: 0rem;
+                margin-block: auto;
+
+            }
+        }
+    }
+}

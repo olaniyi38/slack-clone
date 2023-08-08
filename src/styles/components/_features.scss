@@ -1,0 +1,17 @@
+@use '../utils' as *;
+
+.features {
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem 0rem;
+    background: $cool-gray;
+
+}
+
+@media (min-width:1024px) {
+    .features {
+        gap: 5rem 0rem;
+        padding: 3rem 0rem;
+    }
+}

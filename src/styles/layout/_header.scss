@@ -1,0 +1,118 @@
+@use '../utils' as *;
+
+.header {
+    background: $dark-purple;
+    color: white;
+
+    position: sticky;
+    top: 0rem;
+    z-index: 5;
+
+
+    &__container {
+        padding: .5rem;
+        display: flex;
+        align-items: center;
+        max-width: 80rem;
+        margin-inline: auto;
+
+    }
+
+    &__nav,&__actions {
+        display: none;
+    }
+    
+    
+
+    svg {
+        width: 1.7rem;
+
+    }
+
+    &__logo {
+        margin-right: auto;
+        fill: white;
+
+        svg {
+            width: 8rem;
+        }
+    }
+
+    &__toggle-btn {
+        cursor: pointer;
+    }
+
+    &__search-btn {
+        margin-right: 2rem;
+
+    }
+
+}
+
+@media (min-width:768px) {
+
+    .header {
+        &__container {
+            padding-inline: 0;
+        }
+
+        padding: 1rem .5rem;
+
+
+    }
+}
+
+
+
+@media (min-width:1080px) { 
+    .header {
+        &__container {
+            
+
+        }
+        &__logo {
+            margin-right: 2rem;
+        }
+
+        &__toggle-btn {
+            display: none;
+        }
+
+        &__nav {
+            display: flex;
+            gap: 0rem 1rem;
+            cursor: pointer;
+            text-transform: capitalize;
+            font-weight: 800;
+            margin-right: auto;
+            font-size: .95rem;
+
+        }
+
+        &__search-btn {
+            margin: 0rem .5rem 0rem .5rem;
+        }
+
+        
+        &__actions {
+            display: flex;
+            align-items: center;
+            gap: 0rem 1rem;
+
+            a {
+                font-weight: 700;
+                font-size: .9rem;
+            }
+
+            .button {
+                padding: .6rem 1rem;
+                font-size: .95rem;
+            }
+            .button--inverted {
+                display: block;
+            }
+        }
+
+    }
+}
+

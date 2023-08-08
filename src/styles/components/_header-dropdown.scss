@@ -1,0 +1,88 @@
+@use '../utils' as *;
+
+.header-dropdown {
+    position: relative;
+
+    &.active {
+        .header-dropdown__container {
+            opacity: 1;
+            transform: translateY(0px);
+           
+        }
+
+        .header-dropdown__toggle {
+            svg {
+                transform: rotate(270deg);
+            }
+        }
+    }
+
+    &__toggle {
+        display: flex;
+        gap: .3rem;
+
+        svg {
+            align-self: center;
+            width: .7rem;
+            stroke-width: 4px;
+            transform: rotate(90deg);
+            margin-top: .2rem;
+            transition: .1s 0s ease-in-out;
+        }
+    }
+
+
+    &__container {
+        opacity: 0;
+        transform: translateY(-12px);
+        transition: all .3s 0s ease-in-out;
+        display: flex;
+        position: absolute;
+        left: 0rem;
+        top: 2.3rem;
+        border-radius: 5px;
+        min-height: 20rem;
+        min-width: 600px;
+        background: white;
+        color: black;
+        z-index: 7;
+    }
+
+    &__main {
+        flex: 2 1 0;
+        padding: 1rem;
+    }
+
+    &__aside {
+        flex: 1 1 0;
+        background: $light-purple;
+        padding: 1rem;
+        border-radius: 5px;
+
+    }
+
+}
+
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-12px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-12px);
+    }
+}
