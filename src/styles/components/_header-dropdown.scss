@@ -6,8 +6,9 @@
     &.active {
         .header-dropdown__container {
             opacity: 1;
-            transform: translateY(0px);
-           
+            translate: 0px 0px;
+            scale: 1;
+            transition: translate .3s ease-in-out, opacity .3s ease-in-out;
         }
 
         .header-dropdown__toggle {
@@ -34,8 +35,9 @@
 
     &__container {
         opacity: 0;
-        transform: translateY(-12px);
-        transition: all .3s 0s ease-in-out;
+        translate: 0px -12px;
+        scale: 0;
+        transition: translate .3s  ease-in-out, opacity .3s ease-in-out, scale 0s .5s;
         display: flex;
         position: absolute;
         left: 0rem;

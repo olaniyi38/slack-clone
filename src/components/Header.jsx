@@ -1,26 +1,14 @@
-import { ReactComponent as SearchSvg } from "../assets/svgs/mag-glass.svg";
-import { ReactComponent as BarsSvg } from "../assets/svgs/bars.svg";
-import { ReactComponent as LogoSvg } from "../assets/svgs/slack.svg";
-
-
 import { useState } from "react";
 
+import { ReactComponent as LogoSvg } from "../assets/svgs/slack.svg";
+import { HiOutlineBars3, HiOutlineMagnifyingGlass } from "react-icons/hi2";
+
 import Button, { BUTTON_TYPES } from "./Button";
-import MobileNav from './MobileNav'
+import MobileNav from "./MobileNav";
 import HeaderDropDown from "./HeaderDropDown";
 
-
-
-const Header = () => {
+const Header = ({ toggleDropDown, activeDropDown }) => {
 	const [isMobileNavActive, setMobileNavActive] = useState(false);
-
-	const [activeDropDown, setActiveDropDown] = useState(null);
-
-	function toggleDropDown(index) {
-		index === activeDropDown
-			? setActiveDropDown(null)
-			: setActiveDropDown(index);
-	}
 
 	return (
 		<div className="header">
@@ -55,9 +43,9 @@ const Header = () => {
 					<a href="">nav link</a>
 				</nav>
 
-					<button className="header__search-btn">
-						<SearchSvg />
-					</button>
+				<button className="header__search-btn">
+					<HiOutlineMagnifyingGlass className="glass" />
+				</button>
 				<div className="header__actions">
 					<a href="#">Sign in</a>
 					<Button variant={BUTTON_TYPES.bordered}>talk to sales</Button>
@@ -67,7 +55,7 @@ const Header = () => {
 					onClick={() => setMobileNavActive(true)}
 					className="header__toggle-btn"
 				>
-					<BarsSvg />
+					<HiOutlineBars3 className="bars" />
 				</div>
 			</div>
 		</div>

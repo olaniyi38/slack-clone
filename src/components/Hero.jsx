@@ -28,7 +28,7 @@ const Hero = () => {
                 </div>
                 <div className="hero__section2">
                     <div className="hero__video">
-                        <video loop autoPlay={ true } poster="https://a.slack-edge.com/2951054/marketing/img/homepage/e2e-prospects/animations/static/hero-product-ui.jpg">
+                        <video loop autoPlay muted   poster="https://a.slack-edge.com/2951054/marketing/img/homepage/e2e-prospects/animations/static/hero-product-ui.jpg">
                             <source src="https://a.slack-edge.com/9689dea/marketing/img/homepage/e2e-prospects/animations/webm/hero-product-ui.webm" type="video/webm" />
 
                         </video>

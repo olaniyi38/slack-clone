@@ -52,19 +52,19 @@
     }
 
     &__video {
-        margin-top: 2rem;
+        margin: 2rem auto;
         width: 37rem;
-
     }
 
 }
 
 @media (min-width : 768px) {
     .hero {
-        padding: 1rem 1.5rem 4rem 1.5rem;
+        padding: 1rem 0rem 4rem 2rem;
 
         &__container {
             display: flex;
+            align-items: center;
             text-align: left;
 
         }
@@ -95,7 +95,7 @@
 
         &__actions {
             gap: 1rem 0rem;
-            padding: 0rem 1rem;
+            padding: 0;
 
             .google-svg {
                 width: 2rem;
@@ -103,7 +103,7 @@
         }
 
         &__video {
-            margin-top: 2rem;
+            margin: 0;
             width: 45rem;
         }
 
@@ -114,18 +114,13 @@
 @media (min-width:1024px) {
     .hero {
         position: relative;
-        padding: 1rem 1.5rem 5rem 1.5rem;
+        padding: 1rem 0rem 5rem 1.5rem;
 
         &__text-aside {
             display: block;
             font-weight: 500;
             font-size: 1.1rem;
             margin-top: .8rem;
-        }
-
-        &__section1 {
-            max-width: 38rem;
-
         }
 
         &__section2 {
@@ -162,16 +157,26 @@
 
         }
 
-        &__video {
-            video {
-                position: absolute;
-                width: min(42rem, 50%);
-                right: 2rem;
-                top: 0rem;
-                bottom: 0rem;
-                margin-block: auto;
+    }
+}
 
-            }
+@media screen and (min-width:1280px) {
+    .hero {
+        &__container {
+            display: flex;
+        }
+
+        &__section1 {
+            flex: 1 1 0%;
+            padding-right: 4rem;
+        }
+
+        &__section2 {
+            flex: 1 1 0%;
+        }
+
+        &__video { 
+            width: 100%;
         }
     }
 }

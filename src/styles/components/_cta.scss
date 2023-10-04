@@ -1,14 +1,12 @@
 @use '../utils' as *;
 
 .cta {
-    padding: 2rem 1rem 6rem 1rem;
+    padding: 2rem 2rem 6rem 2rem;
     text-align: center;
     background: $dark-purple;
     color: white;
     margin-bottom: 5rem;
     clip-path: ellipse(105% 100% at center top);
-
-
 
     &__title {
         font-size: $scale-l;

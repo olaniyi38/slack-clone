@@ -1,8 +1,8 @@
 import { useMediaQuery, useWindowSize } from "@uidotdev/usehooks"
-import { useState } from "react"
-import { useEffect } from "react"
+import { HiOutlineArrowRight } from 'react-icons/hi'
 
-const FlexItem = ({ data }) => {
+
+const Feature = ({ data }) => {
     const { vidSrc, title, text, link } = data
 
     const isTablet = useMediaQuery('(min-width:768px)')
@@ -15,7 +15,7 @@ const FlexItem = ({ data }) => {
             <div className="feature__video">
                 {
                     isTablet ? (
-                        <video loop autoPlay key={ vidSrc.desk } >
+                        <video loop autoPlay muted key={ vidSrc.desk } >
                             <source
                                 src={ vidSrc.desk }
                                 type="video/webm"
@@ -24,7 +24,7 @@ const FlexItem = ({ data }) => {
 
                     ) :
                         (
-                            <video loop autoPlay key={ vidSrc.mobile }>
+                            <video loop autoPlay muted key={ vidSrc.mobile }>
                                 <source
                                     src={ vidSrc.mobile }
                                     type="video/webm"
@@ -36,15 +36,14 @@ const FlexItem = ({ data }) => {
             <div className="feature__about">
                 <h1>{ title }</h1>
                 <p>{ text }</p>
-                <a href={ link.url }>{ link.title }</a>
+                <a href={ link.url }>
+                    <span>{ link.title }</span>
+                    <HiOutlineArrowRight />
+                </a>
             </div>
         </div>
     )
 }
 
-export default FlexItem
+export default Feature
 
-// Bring your team together
-
-// At the heart of Slack are channels: organized spaces for everyone and everything you need for work. In channels, it’s easier to connect across departments, offices, time zones and even other companies.
-// Learn more about channels
