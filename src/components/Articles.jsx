@@ -1,8 +1,5 @@
-import React from 'react'
 import Card from './Card'
-import { Swiper, SwiperSlide } from 'swiper/react'
 
-import { Pagination } from 'swiper/modules'
 
 
 const ARTICLES = [
