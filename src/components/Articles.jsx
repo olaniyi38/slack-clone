@@ -52,25 +52,13 @@ const Articles = () => {
 			<motion.div
 				initial={{ opacity: 0, y: 30 }}
 				whileInView={{ opacity: 1, y: 0 }}
-				transition={{ delay: .2, duration: 0.3 }}
+				transition={{ delay: 0.2, duration: 0.3 }}
 				viewport={{ once: true, margin: "100px 0px 0px 0px" }}
 				className="articles__container"
 			>
-				{/* <Swiper modules={[Pagination]} pagination={{
-                    clickable:true
-                }}> */}
 				{ARTICLES.map((data) => {
-					//  <SwiperSlide>
-					return (
-						<a key={data.title} href={data.link}>
-							<Card data={data} />
-						</a>
-					);
-					{
-						/* </SwiperSlide> */
-					}
+					return <Card key={data.title} data={data} />;
 				})}
-				{/* </Swiper> */}
 			</motion.div>
 		</section>
 	);

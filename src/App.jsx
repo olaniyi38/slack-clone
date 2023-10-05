@@ -52,7 +52,7 @@ function App() {
 					<div>
 						{companiesImgs.map((link) => {
 							return (
-								<div className="img">
+								<div key={link} className="img">
 									<img src={link} alt="" />
 								</div>
 							);

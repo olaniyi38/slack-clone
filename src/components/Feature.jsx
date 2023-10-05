@@ -1,4 +1,4 @@
-import { useMediaQuery, useWindowSize } from "@uidotdev/usehooks";
+import { useMediaQuery } from "@uidotdev/usehooks";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import { motion } from "framer-motion";
 
