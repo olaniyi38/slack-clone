@@ -18,11 +18,11 @@ const Feature = ({ data }) => {
 			>
 				{isTablet ? (
 					<video loop autoPlay muted key={vidSrc.desk}>
-						<source src={vidSrc.desk} type="video/webm" />
+						<source rel="preload" src={vidSrc.desk} type="video/webm" />
 					</video>
 				) : (
 					<video loop autoPlay muted key={vidSrc.mobile}>
-						<source src={vidSrc.mobile} type="video/webm" />
+						<source rel="preload" src={vidSrc.mobile} type="video/webm" />
 					</video>
 				)}
 			</motion.div>

@@ -5,28 +5,32 @@ import Button from "./Button";
 import { motion } from "framer-motion";
 
 const fadeIn = {
-    hide: {
-        opacity: 0,
-        y: 30,
-    },
-    show: (i = 0) => ({
-        y: 0,
-        opacity: 1,
-        transition: {
-            delay: i,
-            duration: .3,
-            ease:"easeOut" 
-        },
-    }),
+	hide: {
+		opacity: 0,
+		y: 30,
+	},
+	show: (i = 0) => ({
+		y: 0,
+		opacity: 1,
+		transition: {
+			delay: i,
+			duration: 0.3,
+			ease: "easeOut",
+		},
+	}),
 };
 
 const Hero = () => {
-
 	return (
 		<section className="hero">
 			<div className="hero__container">
 				<div className="hero__section1">
-					<motion.hgroup custom={.4} variants={fadeIn} initial="hide" animate="show">
+					<motion.hgroup
+						custom={0.4}
+						variants={fadeIn}
+						initial="hide"
+						animate="show"
+					>
 						<h1 className="hero__title">
 							Made for people.
 							<span className="hero__sub-title">Built for productivity.</span>
@@ -75,12 +79,14 @@ const Hero = () => {
 						className="hero__video"
 					>
 						<video
+							rel="preload"
 							loop
 							autoPlay={true}
-                            muted
+							muted
 							poster="https://a.slack-edge.com/2951054/marketing/img/homepage/e2e-prospects/animations/static/hero-product-ui.jpg"
 						>
 							<source
+								rel="preload"
 								src="https://a.slack-edge.com/9689dea/marketing/img/homepage/e2e-prospects/animations/webm/hero-product-ui.webm"
 								type="video/webm"
 							/>

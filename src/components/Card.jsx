@@ -6,7 +6,7 @@ const Card = ({ data }) => {
     return (
         <div className='card'>
             <div className="card__img">
-                <img src={ imgSrc } alt="" />
+                <img loading='lazy' src={ imgSrc } alt="" />
             </div>
             <div className="card__content">
                 <p className="card__tag">{ tag }</p>

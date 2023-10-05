@@ -13,11 +13,12 @@ const Testimonials = () => {
 			>
 				<video loop muted autoPlay>
 					<source
+						rel="preload"
 						src="https://a.slack-edge.com/1b4e2a3/marketing/img/homepage/true-prospects/customer-showcase/IBM_08.mp4"
 						type="video/mp4"
 					/>
 				</video>
-				<a href="" className="play-link">
+				<a href="#" className="play-link">
 					<button className="play-btn">
 						<HiPlay className="play-svg" />
 					</button>

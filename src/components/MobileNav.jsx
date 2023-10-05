@@ -9,12 +9,12 @@ import { HiOutlineX } from "react-icons/hi";
 const LINKS = ["solutions", "enterprise", "resources", "pricing", "sign in"];
 const SUB_LINKS = {
 	0: [
-		{ name: "features", url: "" },
-		{ name: "channels", url: "" },
-		{ name: "integrations", url: "" },
-		{ name: "security", url: "" },
-		{ name: "slack Connect", url: "" },
-		{ name: "customers", url: "" },
+		{ name: "features", url: "#" },
+		{ name: "channels", url: "#" },
+		{ name: "integrations", url: "#" },
+		{ name: "security", url: "#" },
+		{ name: "slack Connect", url: "#" },
+		{ name: "customers", url: "#" },
 	],
 };
 
