@@ -7,6 +7,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Stats from "./components/Stats";
 import Testimonials from "./components/Testimonial";
+import { motion } from "framer-motion";
 
 const companiesImgs = [
 	"https://a.slack-edge.com/e2fa17/marketing/img/logos/company/_color/airbnb-logo.png",
@@ -15,6 +16,22 @@ const companiesImgs = [
 	"https://a.slack-edge.com/044f5db/marketing/img/logos/company/_color/nyt.png",
 	"https://a.slack-edge.com/1e38e34/marketing/img/logos/company/logo-etsy.png",
 ];
+
+const fadeIn = {
+	hide: {
+		opacity: 0,
+		y: 30,
+	},
+	show: (i = 0) => ({
+		y: 0,
+		opacity: 1,
+		transition: {
+			delay: i,
+			duration: 0.3,
+			ease: "easeOut",
+		},
+	}),
+};
 
 function App() {
 	const [activeDropDown, setActiveDropDown] = useState(null);
@@ -47,11 +64,27 @@ function App() {
 				<Testimonials />
 				<Articles />
 				<section className="cta">
-					<h1 className="cta__title">See all you can accomplish with slack</h1>
-					<div className="cta__buttons">
+					<motion.h1
+						variants={fadeIn}
+						custom={0.2}
+						initial="hide"
+						whileInView="show"
+						viewport={{ once: true, margin: "300px 0px 0px 0px" }}
+						className="cta__title"
+					>
+						See all you can accomplish with slack
+					</motion.h1>
+					<motion.div
+						variants={fadeIn}
+						custom={0.3}
+						initial="hide"
+						whileInView="show"
+						viewport={{ once: true, margin: "300px 0px 0px 0px" }}
+						className="cta__buttons"
+					>
 						<Button variant={BUTTON_TYPES.inverted}>talk to sales</Button>
 						<Button variant={BUTTON_TYPES.bordered}>Try for free</Button>
-					</div>
+					</motion.div>
 				</section>
 			</main>
 			<Footer />

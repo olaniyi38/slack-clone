@@ -1,4 +1,4 @@
-@use '../utils' as * ;
+@use '../utils' as *;
 
 .footer {
     padding: 1rem;
@@ -7,13 +7,55 @@
 
     &__logo {
         svg {
-            width: 4rem;
+            width: 2rem;
+            height: 2rem;
         }
 
         margin-bottom: 2rem;
     }
 
-    &__links {}
+    &__bottom {
+        border-top: 1px solid rgb(190, 190, 190);
+        padding: 1rem 0rem;
+
+        > div:nth-child(2) {
+            display: flex;
+            gap: 0rem 2rem;
+            align-items: center;
+
+            > a {
+                display: flex;
+                align-items: center;
+                gap: 0rem .5rem;
+                color: $light-blue;
+                font-size: .9rem;
+                font-weight: 600;
+
+            }
+        }
+    }
+
+
+    .link-list {
+        text-transform: capitalize;
+
+        &__links {
+            color: rgb(71, 71, 71);
+
+            a {
+                transition: color .3s ease-in-out;
+
+                &:hover {
+                    color: $light-blue;
+                }
+            }
+
+        }
+
+        &__header {
+            font-weight: 600;
+        }
+    }
 
     &__links2 {
         display: flex;
@@ -21,12 +63,28 @@
         flex-direction: column;
         gap: 1rem;
         font-size: $scale-xs;
-        font-weight: 500;
-        border-top: 1px solid rgb(190, 190, 190);
+        font-weight: 600;
         padding: 1rem 0rem;
+        text-transform: capitalize;
 
         a {
             flex: 0 1 auto;
+
+            &[aria-name="privacy"] {
+                display: flex;
+                align-items: center;
+                gap: .3rem;
+            }
+        }
+    }
+
+    &__social-links {
+        display: flex;
+        gap: 1rem;
+
+        svg {
+            width: 1.3rem;
+            height: 1.3rem;
         }
     }
 
@@ -41,16 +99,50 @@
     .footer {
         padding: 0rem 2rem 2rem 2rem;
 
-        .link-list__links {
-            clip-path: inset(0% 0% 0% 0%);
-            transition: none;
-            height: 100%;
+        .link-list {
+            text-transform: capitalize;
+
+            &__links {
+                clip-path: inset(0% 0% 0% 0%);
+                transition: none;
+                height: 100%;
+                gap: 1rem;
+            }
+
+
+
         }
 
+        &__logo {
+            flex: none;
 
-        &__links {
+            svg {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+        }
+
+        &__top {
+            display: flex;
+            gap: 0rem 10rem;
+
+        }
+
+        &__bottom {
             display: flex;
             justify-content: space-between;
+        }
+
+        &__links {
+            flex: 1 1 0;
+            padding-bottom: 3rem;
+
+            > div {
+                display: flex;
+                justify-content: space-between;
+                font-weight: 500;
+
+            }
         }
 
         &__links2 {
@@ -58,7 +150,11 @@
             flex-wrap: wrap;
             flex-direction: row;
             gap: 1rem;
+
+
         }
+
+
 
         aside {
             padding: 1rem 0rem;

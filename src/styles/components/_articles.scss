@@ -5,18 +5,9 @@
   background: $cool-gray ;
   padding: 2rem 0rem;
 
-
-  .swiper-pagination {
-    bottom: -1rem;
-
-    &-bullets {}
-
-    &-bullet {
-      width: 1rem;
-      height: 1rem;
-      background: $dark-purple;
-
-    }
+  svg {
+    width: 1.4rem;
+    height: 1.4rem;
   }
 }
 

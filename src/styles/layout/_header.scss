@@ -1,22 +1,55 @@
 @use '../utils' as *;
 
 .header {
+    position: relative;
+    z-index: 3;
+    translate: 0px;
     background: $dark-purple;
     color: white;
+    padding: .5rem;
 
-    position: sticky;
-    top: 0rem;
-    z-index: 5;
 
 
     &__container {
-        padding: .5rem;
         display: flex;
         align-items: center;
         max-width: 80rem;
         margin-inline: auto;
 
     }
+
+    &.sticky {
+        position: fixed;
+        width: 100%;
+        padding: .5rem;
+        translate: 0px 10px;
+        transition: translate .3s 0s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        background: none;
+
+
+        .button--bordered {
+            color: $dark-purple;
+            border: 1px solid $dark-purple;
+        }
+
+        .button--inverted {
+            background: $dark-purple;
+            color: white;
+        }
+
+        .header__container {
+            border-radius: 10rem;
+            background: white;
+            color: black;
+            padding: .5rem 2rem;
+            box-shadow: 0px 10px 30px -20px rgba(0, 0, 0, 0.438);
+        }
+
+        .header__logo {
+            fill: black;
+        }
+    }
+
 
     &__nav,
     &__actions {
@@ -88,6 +121,13 @@
 
 @media (min-width:1080px) {
     .header {
+
+        &.sticky {
+            .header__container {
+                padding: 1rem 2rem;
+            }
+        }
+
         &__container {
             padding: 0rem;
         }
@@ -105,7 +145,7 @@
             gap: 0rem 1.5rem;
             cursor: pointer;
             text-transform: capitalize;
-            font-weight: 800;
+            font-weight: 600;
             margin-right: auto;
             font-size: .95rem;
 
@@ -115,6 +155,32 @@
             margin: 0rem 1rem 0rem .5rem;
         }
 
+        &__nav-link {
+            position: relative;
+            width: fit-content;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: white;
+                bottom: -2px;
+                transform: scaleX(0);
+                transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                transform-origin: right;
+            }
+
+            &:hover {
+                &::before {
+                    transform: scaleX(1);
+                    transform-origin: left;
+
+                }
+            }
+
+        }
+
 
         &__actions {
             display: flex;
@@ -122,7 +188,7 @@
             gap: 0rem 1rem;
 
             a {
-                font-weight: 700;
+                font-weight: 600;
                 font-size: .9rem;
                 margin: 0rem 1rem;
             }
@@ -130,6 +196,7 @@
             .button {
                 padding: .6rem 1rem;
                 font-size: .95rem;
+                transition: all .2s cubic-bezier(0.55, 0.085, 0.68, 0.53);
             }
 
             .button--inverted {
@@ -138,4 +205,18 @@
         }
 
     }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        translate: 0px -20px;
+        opacity: 0;
+    }
+
+    100% {
+        translate: 0px 30px;
+        opacity: 1;
+    }
+
 }

@@ -4,13 +4,10 @@ import { ReactComponent as ChevronRightSvg } from '../assets/svgs/chevron-down.s
 
 const LinkList = ({ title, links }) => {
     const [isActive, setIsActive] = useState(false)
-
-   
     function toggleList() {
-        console.log('cl')
         setIsActive(!isActive)
     }
-
+ 
     return (
         <div onClick={ toggleList } className={ `link-list ${isActive ? 'active' : ''}` }>
             <div className="link-list__header">

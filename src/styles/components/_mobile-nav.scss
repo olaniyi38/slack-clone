@@ -2,8 +2,6 @@
 
 .mobile-nav {
     position: fixed;
-    width: 100%;
-    height: 100%;
     background: white;
     color: black;
     z-index: 4;
@@ -11,17 +9,34 @@
     display: flex;
     flex-direction: column;
     transform: translateX(100%);
-    transition: transform .3s 0s ease-in-out;
+    transition: transform .3s .4s ease-in-out;
 
     &.active {
         transform: translateX(0%);
+        transition: transform .3s 0s ease-in-out;
 
+        .mobile-nav__nav-link {
+            translate: 0px;
+            transition: translate .4s .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+
+        .link-list {
+            translate: 0px;
+            transition: translate .4s .4s cubic-bezier(0.215, 0.610, 0.355, 1);
+        }
+
+
+    }
+
+    .overflow-hidden {
+        margin: 1.5rem 0rem;
     }
 
     &__close {
         .close-svg {
             width: 2rem;
-            
+            height: 2rem;
+
         }
     }
 
@@ -45,12 +60,14 @@
     }
 
     &__nav-links {
-        padding: 2rem 1.5rem;
+        padding: 0rem 1.5rem;
     }
 
     .link-list {
         margin: 0;
         padding: 0;
+        translate: 0px 50px;
+        transition: translate .4s 0s cubic-bezier(0.23, 1, 0.320, 1);
 
         &__header {
             display: block;
@@ -91,8 +108,8 @@
 
     &__nav-link {
         display: block;
-        margin: 1.2rem 0rem;
-
+        translate: 0px 30px;
+        transition: translate .4s 0s cubic-bezier(0.23, 1, 0.320, 1);
     }
 
     &__buttons {
@@ -107,4 +124,11 @@
             color: $dark-purple
         }
     }
+}
+
+
+@media screen and (min-width:1080px) {
+     .mobile-nav {
+        display: none;
+     } 
 }

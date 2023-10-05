@@ -1,10 +1,16 @@
-
 import { HiOutlineArrowRight, HiPlay } from "react-icons/hi2";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
 	return (
 		<section className="testimonial">
-			<div className="testimonial__video">
+			<motion.div
+				initial={{ opacity: 0, x: -30 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				viewport={{ once: true, margin: "300px 0px 0px 0px" }}
+				transition={{ duration: 0.3, delay: 0.4 }}
+				className="testimonial__video"
+			>
 				<video loop muted autoPlay>
 					<source
 						src="https://a.slack-edge.com/1b4e2a3/marketing/img/homepage/true-prospects/customer-showcase/IBM_08.mp4"
@@ -16,8 +22,14 @@ const Testimonials = () => {
 						<HiPlay className="play-svg" />
 					</button>
 				</a>
-			</div>
-			<div className="testimonial__container">
+			</motion.div>
+			<motion.div
+				initial={{ opacity: 0, x: 30 }}
+				whileInView={{ opacity: 1, x: 0 }}
+				viewport={{ once: true, margin: "300px 0px 0px 0px" }}
+				transition={{ duration: 0.3, delay: 0.4 }}
+				className="testimonial__container"
+			>
 				<p className="testimonial__quote">
 					“Whether you’re a small or large organization, executing anything from
 					a discrete modernization program to a digital transformation
@@ -34,7 +46,7 @@ const Testimonials = () => {
 					<span>see more customer stories</span>
 					<HiOutlineArrowRight className="arrow-right" />
 				</a>
-			</div>
+			</motion.div>
 			<aside>
 				Weighted average. Based on 2,707 survey responses from weekly Slack
 				users in the U.S., UK, Australia and Canada with a ± 2% margin of error

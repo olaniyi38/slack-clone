@@ -1,4 +1,5 @@
-import {ReactComponent as ArrowRightSvg } from '../assets/svgs/arrow-right.svg'
+import { HiOutlineArrowRight } from 'react-icons/hi2'
+
 
 const Card = ({ data }) => {
     const { imgSrc, tag, title, link } = data
@@ -16,7 +17,7 @@ const Card = ({ data }) => {
             <div className="card__footer">
                 <a href={ link.url } className="card__link">
                     <span>{ link.title }</span>
-                    <ArrowRightSvg />
+                   <HiOutlineArrowRight className='arrow-right'/>
                 </a>
 
             </div>

@@ -1,4 +1,13 @@
-@use 'utils';
+@use 'utils' as *;
 @use 'base';
 @use 'layout';
 @use 'components';
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+#root {
+    overflow: hidden;
+}
+

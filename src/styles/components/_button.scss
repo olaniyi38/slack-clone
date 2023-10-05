@@ -6,7 +6,7 @@
     font-weight: 600;
     position: relative;
     border-radius: 3px;
-
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
     background: $dark-purple;
     color: white;
 
@@ -16,22 +16,44 @@
         background: white;
         border: 1px solid $dark-purple;
 
+        &:hover {
+            background: $dark-purple;
+            color: white;
+            outline: 1px solid white;
+        }
+
     }
 
     &--bordered {
         color: white;
         background: none;
         border: 1px solid white;
+
+        &:hover {
+            background:white;
+            color: $dark-purple;
+        }
     }
 
     &--google {
         background: hsl(217, 89%, 61%);
 
+        &:hover {
+            background: hsl(217, 87%, 55%);
+        }
+
+        display: flex;
+        align-items: center;
+        gap: 0rem;
+        padding: 0rem 1rem 0rem .2rem;
+
+        span {
+            flex: 3 1 0;
+        }
+
         .svg {
             background: $cool-gray;
-            position: absolute;
-            top: 0;
-            bottom: 0;
+            flex: .5 1 0;
             display: grid;
             left: .5rem;
             place-items: center;

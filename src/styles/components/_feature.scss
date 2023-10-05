@@ -2,6 +2,7 @@
 
 .feature {
     max-width: 95%;
+    overflow: hidden;
 
     &__video {
         padding: 0rem 2rem 0rem 0rem;
@@ -38,6 +39,28 @@
 
         a {
             color: $light-blue;
+            position: relative;
+            width: fit-content;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: $light-blue;
+                bottom: -2px;
+                transform: scaleX(0);
+                transition: transform .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                transform-origin: right;
+            }
+
+            &:hover {
+                &::before {
+                    transform: scaleX(1);
+                    transform-origin: left;
+
+                }
+            }
 
             svg {
                 width: 1.4rem;
@@ -91,7 +114,7 @@
         display: flex;
         gap: 0rem 5rem;
         align-items: center;
-        
+
         padding: 0rem 1.5rem 0rem 0rem;
         margin: 0 auto;
 
