@@ -1,5 +1,9 @@
 
-[slack main.webm](https://github.com/olaniyi38/slack-clone/assets/64047355/87dadfe8-0ab2-4ce9-b25b-0a0892e31389)
+
+
+https://github.com/olaniyi38/slack-clone/assets/64047355/a9a501d0-3de9-48e2-aed8-2831bac9fc1e
+
+
 ## Slack Landing Page Clone
 
 ### Overview
